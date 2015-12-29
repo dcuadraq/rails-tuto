@@ -8,4 +8,7 @@ class HomeController < ApplicationController
   def temp
     redirect_to root_path
   end
+
+  def question
+  end
 end
