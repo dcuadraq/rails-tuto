@@ -1,43 +1,16 @@
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2010/03/gravatar.jpg" alt="Not found">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">user@email.com asked:</h4>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    <div>
-      <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+<% @questions.each do |q| %>
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2010/03/gravatar.jpg" alt="Not found">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%= q.email %></h4>
+      <%= q.body %>
+      <div>
+        <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+      </div>
     </div>
   </div>
-</div>
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2010/03/gravatar.jpg" alt="Not found">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">user@email.com asked:</h4>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    <div>
-      <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-    </div>
-  </div>
-</div>
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2010/03/gravatar.jpg" alt="Not found">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">user@email.com asked:</h4>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    <div>
-      <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
-    </div>
-  </div>
-</div>
-
+<% end %>
