@@ -1,0 +1,42 @@
+<div class="lead well">
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2010/03/gravatar.jpg" alt="Not found">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%= @question.email %></h4>
+      <p><%= @question.body %></p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+
+    <div>
+      <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#new-answer-modal">Submit new answer</a>
+    </div>
+
+    <%= render 'answers/new_answer_form' %>
+
+    <% @answers.each do |answer| %>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" src="http://thenextweb.com/wp-content/blogs.dir/1/files/2010/03/gravatar.jpg" alt="Not found">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= answer.email %></h4>
+          <%= time_ago_in_words answer.created_at %> ago
+          <p/>
+          <%= answer.body %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+

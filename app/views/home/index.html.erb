@@ -6,10 +6,11 @@
       </a>
     </div>
     <div class="media-body">
-      <h4 class="media-heading"><%= q.email %></h4>
-      <%= q.body %>
+      <h4 class="media-heading"><%= q.email %> asked:</h4>
+      <p><%= time_ago_in_words q.created_at %> ago</p>
+      <p><%= q.body %></p>
       <div>
-        <a href="/questions/12" class="btn btn-success btn-xs">View Answers</a>
+        <a href="<%= question_path(q) %>" class="btn btn-success btn-xs">View Answers</a>
       </div>
     </div>
   </div>
